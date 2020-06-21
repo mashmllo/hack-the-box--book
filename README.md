@@ -20,7 +20,7 @@ code-block-font-size: \scriptsize
 
 This is a walkthrough of the box Blunder using Metasploit.
 
-## Information about the box 
+### Information about the box 
 
 IP address: 10.10.10.191
 
@@ -29,7 +29,7 @@ OS: Linux
 Difficulty: Easy
 
 Release: May 30 2020
-#### Service Enumeration
+## Service Enumeration
 
 The service enumeration portion of a penetration test focuses on gathering information about what services are alive on a system or systems.
 This is valuable for an attacker as it provides detailed information on potential attack vectors into a system.
@@ -40,7 +40,7 @@ Server IP Address | Ports Open
 10.10.10.191      | **TCP**: 80\
 
 
-##### Nmap Scan Results
+### Nmap Scan Results
 ```
 Starting Nmap 7.80 ( https://nmap.org ) at 2020-06-21 16:51 +08
 Stats: 0:10:48 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
@@ -68,12 +68,12 @@ Nmap done: 1 IP address (1 host up) scanned in 1376.98 seconds
 ```
 Based on the nmap, only port 80 is open. 
 
-##### web page
+### web page
 
-*source code*
+#### source code
 when looking through the source code, there is nothing out of the ordinary.
 
-*nikto scan*
+#### nikto scan
 ```
 - Nikto v2.1.6
 ---------------------------------------------------------------------------
@@ -118,7 +118,7 @@ when looking through the source code, there is nothing out of the ordinary.
 - Sent updated info to cirt.net -- Thank you!
 
 ```
-*dirbuster*
+#### dirbuster
 ````
 DirBuster 1.0-RC1 - Report
 http://www.owasp.org/index.php/Category:OWASP_DirBuster_Project
@@ -163,14 +163,14 @@ Dirs found with a 200 response:
 --------------------------------
 
 ````
-*/robots.txt*
+#### /robots.txt
 ![Image of robot.txt](https://github.com/friend-col/hack-the-box--blunder/blob/master/img/robots.jpg)
 
-*/todo.txt*
+#### /todo.txt
 todo.txt is a list of things that needs to be completed 
 <insert img>
 
-*/admin*
+#### /admin
 admin webpage is presented with a login page 
 <insert img> 
 
