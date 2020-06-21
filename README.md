@@ -37,10 +37,11 @@ Understanding what applications are running on the system gives an attacker need
 
 Server IP Address | Ports Open
 ------------------|----------------------------------------
-10.10.10.191      | **TCP**: 80\
+10.10.10.191      | **TCP**: 80
 
 
 ### Nmap Scan Results
+As shown in the nmap scan, only port 80 is open. 
 ```
 Starting Nmap 7.80 ( https://nmap.org ) at 2020-06-21 16:51 +08
 Stats: 0:10:48 elapsed; 0 hosts completed (1 up), 1 undergoing SYN Stealth Scan
@@ -66,7 +67,6 @@ OS and Service detection performed. Please report any incorrect results at https
 Nmap done: 1 IP address (1 host up) scanned in 1376.98 seconds
 
 ```
-Based on the nmap, only port 80 is open. 
 
 ### web page
 
@@ -74,6 +74,7 @@ Based on the nmap, only port 80 is open.
 when looking through the source code, there is nothing out of the ordinary.
 
 #### nikto scan
+nikto scan reveals /admin & /robots.txt is present in the webpage. 
 ```
 - Nikto v2.1.6
 ---------------------------------------------------------------------------
@@ -88,13 +89,13 @@ when looking through the source code, there is nothing out of the ordinary.
 + The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
 + The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
 + All CGI directories 'found', use '-C none' to test none
-+ "robots.txt" contains 1 entry which should be manually viewed.
+> + "robots.txt" contains 1 entry which should be manually viewed.<
 + Web Server returns a valid response with junk HTTP methods, this may cause false positives.
 + /admin/config.php: PHP Config file may contain database IDs and passwords.
 + /admin/cplogfile.log: DevBB 1.0 final (http://www.mybboard.com) log file is readable remotely. Upgrade to the latest version.
 + /admin/system_footer.php: myphpnuke version 1.8.8_final_7 reveals detailed system information.
 + OSVDB-3233: /admin/admin_phpinfo.php4: Mon Album from http://www.3dsrc.com version 0.6.2d allows remote admin access. This should be protected.
-+ OSVDB-5034: /admin/login.php?action=insert&username=test&password=test: phpAuction may allow user admin accounts to be inserted without proper authentication. Attempt to log in with user 'test' password 'test' to verify.
+>+ OSVDB-5034: /admin/login.php?action=insert&username=test&password=test: phpAuction may allow user admin accounts to be inserted without proper authentication. Attempt to log in with user 'test' password 'test' to verify.<
 + OSVDB-376: /admin/contextAdmin/contextAdmin.html: Tomcat may be configured to let attackers read arbitrary files. Restrict access to /admin.
 + OSVDB-2813: /admin/database/wwForum.mdb: Web Wiz Forums pre 7.5 is vulnerable to Cross-Site Scripting attacks. Default login/pass is Administrator/letmein
 + OSVDB-2922: /admin/wg_user-info.ml: WebGate Web Eye exposes user names and passwords.
@@ -137,7 +138,7 @@ Dirs found with a 403 response:
 Dirs found with a 200 response:
 
 /
-/admin/
+>/admin/<
 /bl-kernel/
 /bl-themes/
 /bl-kernel/js/
@@ -149,7 +150,7 @@ Dirs found with a 200 response:
 --------------- omitted --------------- 
 /bl-kernel/admin/controllers/settings-general.php
 /bl-themes/blogx/css/style.css
-/robots.txt
+>/robots.txt<
 /bl-themes/alternative/css/style.css
 /bl-themes/social-network/css/style.css
 /bl-kernel/admin/themes/booty/css/bludit.bootstrap.css
@@ -167,7 +168,9 @@ Dirs found with a 200 response:
 ![Image of robot.txt](https://github.com/friend-col/hack-the-box--blunder/blob/master/img/robots.jpg)
 
 #### /todo.txt
-todo.txt is a list of things that needs to be completed 
+todo.txt is a list of things that needs to be completed. 
+User *fregus* was noted.
+<br />
 ![Image of todo.txt](https://github.com/friend-col/hack-the-box--blunder/blob/master/img/todo.jpg)
 
 #### /admin
@@ -177,8 +180,9 @@ admin webpage is presented with a login page
 
 Source code was checked but it does not provide any credentials. 
 Next, google is used to find out if there is any default credentials.
-A directory was given where it the user's credentials were shown, thus the directory was being searched and there was nothing in the directory 
-
+A directory was given where it the user's credentials were shown, thus the directory was being searched.  
+	``` Name of Directory: /bl-content/databases/ users.php```
+As shown in the image, there wasn't anything in the directory. 
 <insert img>
 
 An article shows a script for Bludit Brute Force Bypass. 
@@ -224,13 +228,6 @@ An article shows a script for Bludit Brute Force Bypass.
     ()
 
     ````
-*/robots.txt*
-<insert img>
-
-*/todo.txt*
-todo.txt is a list of things that needs to be completed 
-<insert img>
-
 #### Gettting User Flag
 
 *getting Reverse shell*
@@ -346,186 +343,3 @@ ac767b447183a65169c00607a931dc03
   Bludit 3.9.2 allows remote code execution via bl-kernel/ajax/upload-images.php because PHP code can be entered with a .jpg file name, and then this PHP code can write other PHP code to a ../ pathname
  *Serverity*
   CVSS 3.0 score: 8.8 High 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Maintaining Access
-
-Maintaining access to a system is important to us as attackers, ensuring that we can get back into a system after it has been exploited is invaluable.
-The maintaining access phase of the penetration test focuses on ensuring that once the focused attack has occurred (i.e. a buffer overflow), we have administrative access over the system again.
-Many exploits may only be exploitable once and we may never be able to get back into a system after we have already performed the exploit.
-
-## House Cleaning
-
-The house cleaning portions of the assessment ensures that remnants of the penetration test are removed.
-Often fragments of tools or user accounts are left on an organization's computer which can cause security issues down the road.
-Ensuring that we are meticulous and no remnants of our penetration test are left over is important.
-
-After collecting trophies from the exam network was completed, Alec removed all user accounts and passwords as well as the Meterpreter services installed on the system.
-Offensive Security should not have to remove any user accounts or services from the system.
-
-
-
-# Additional Items
-
-## Appendix - Proof and Local Contents:
-
-IP (Hostname) | Local.txt Contents | Proof.txt Contents
---------------|--------------------|-------------------
-192.168.x.x   | hash_here          | hash_here
-192.168.x.x   | hash_here          | hash_here
-192.168.x.x   | hash_here          | hash_here
-192.168.x.x   | hash_here          | hash_here
-192.168.x.x   | hash_here          | hash_here
-
-## Appendix - Metasploit/Meterpreter Usage
-
-For the exam, I used my Metasploit/Meterpreter allowance on the following machine: `192.168.x.x`
-
-## Appendix - Completed Buffer Overflow Code
-
-```
-code here
-```
