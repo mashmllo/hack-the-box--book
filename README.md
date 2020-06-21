@@ -200,8 +200,8 @@ As shown in the image, there wasn't anything in the directory.
 An article shows a script for Bludit Brute Force Bypass. <br />
 [link to the article](https://rastating.github.io/bludit-brute-force-mitigation-bypass/)
 <br />
-##### preperation
- **generating a password list for the script to brute force**
+## preperation
+### generating a password list for the script to brute force
  <br />
 	A password list is generated using cewl. 
 	Cewl is a  ruby app which spiders a given url to a specified depth, optionally following external links, and returns a list of words which can then be used for password crackers 
@@ -211,7 +211,7 @@ An article shows a script for Bludit Brute Force Bypass. <br />
 		- -d 10: Depth to spider to, the depth in this case is 10
 		- -m 1: Minimum word length, the minimum word length in this case is 1 
 <br />
- **preperating the code to for brute force**
+### preperating the code to for brute force
  <br />
    host was set to the IP address of the target machine 
    username was set to *fregus*, the username shown in todo.txt
@@ -246,9 +246,9 @@ An article shows a script for Bludit Brute Force Bypass. <br />
     ()
 
     ````
-### Gettting User Flag
+## Gettting User Flag
 
-#### getting Reverse shell
+### Getting Reverse shell
 
   By searching Bludit on metasploit, we found a module
   <br />
@@ -349,9 +349,9 @@ cat user.txt
 6eb3f4773e49edbc246dd7238ed6a32a
 ```
 
-### Privilege Escalation
+## Privilege Escalation
 
-#### Vulnerability Exploited
+### Vulnerability Exploited
 hugo's sudo rights was checked using the command: sudo -l
 <br />
 ```
@@ -376,31 +376,29 @@ root@blunder:/root# cat root.txt
 cat root.txt
 ac767b447183a65169c00607a931dc03
 ```
-### Additional Information about the exploit
-#### sudo bash bypass
-##### Description
+## Additional Information about the exploit
+### sudo bash bypass
+#### Description
 In Sudo before 1.8.28, an attacker with access to a Runas ALL sudoer account can bypass certain policy blacklists and session PAM modules, and can cause incorrect logging, by invoking sudo with a crafted user ID
 <br />
-##### CVE ID
+#### CVE ID
 CVE-2019-14287
- ##### Severity
+ #### Severity
   CVSS 3.0 score: 8.8 High
 
-
-
-#### bludit bypass
-##### Description
+### bludit bypass
+#### Description
    bl-kernel/security.class.php in Bludit 3.9.2 allows attackers to bypass a brute-force protection mechanism by using many different forged X-Forwarded-For or Client-IP HTTP headers
   <br />
-  #####  CVE ID
+  ####  CVE ID
   CVE-2019-17240
- ##### Serverity
+ #### Serverity
    CVSS 3.0 score: 9.8 Critial 
 
-#### Directory Traversal Image File Upload 
-##### Description
+### Directory Traversal Image File Upload 
+#### Description
 Bludit 3.9.2 allows remote code execution via bl-kernel/ajax/upload-images.php because PHP code can be entered with a .jpg file name, and then this PHP code can write other PHP code to a ../ pathname
-##### CVE ID
+#### CVE ID
 CVE-2019-16113
-##### Serverity
+#### Serverity
   CVSS 3.0 score: 8.8 High 
