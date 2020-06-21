@@ -168,13 +168,14 @@ Dirs found with a 200 response:
 
 #### /todo.txt
 todo.txt is a list of things that needs to be completed 
-<insert img>
+![Image of todo.txt](https://github.com/friend-col/hack-the-box--blunder/blob/master/img/todo.jpg)
 
 #### /admin
 admin webpage is presented with a login page 
-<insert img> 
+<br />
+![Image of admin login page](https://github.com/friend-col/hack-the-box--blunder/blob/master/img/admin%20page%20.jpg)
 
-Source code does not provide any credentials. 
+Source code was checked but it does not provide any credentials. 
 Next, google is used to find out if there is any default credentials.
 A directory was given where it the user's credentials were shown, thus the directory was being searched and there was nothing in the directory 
 
