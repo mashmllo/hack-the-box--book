@@ -125,8 +125,11 @@ Indeed, todo.txt is being left out by nikto scan
 Therefore, the final 3 directories found are: 
 <br />
 	1. robots.txt
+	<br />
 	2. todo.txt
+	<br />
 	3. /admin
+	<br />
 ````
 DirBuster 1.0-RC1 - Report
 http://www.owasp.org/index.php/Category:OWASP_DirBuster_Project
@@ -172,6 +175,7 @@ Dirs found with a 200 response:
 
 ````
 #### /robots.txt
+robots.txt does not disclose any directories.
 ![Image of robot.txt](https://github.com/friend-col/hack-the-box--blunder/blob/master/img/robots.jpg)
 
 #### /todo.txt
@@ -190,10 +194,11 @@ Next, google is used to find out if there is any default credentials.
 A directory was given where it the user's credentials were shown, thus the directory was being searched.  
 	``` Name of Directory: /bl-content/databases/ users.php```
 As shown in the image, there wasn't anything in the directory. 
-<insert img>
+![Image of cred_not_found](https://github.com/friend-col/hack-the-box--blunder/blob/master/img/bludit_cred_page_not_found.jpg)
 
 An article shows a script for Bludit Brute Force Bypass. 
-
+https://rastating.github.io/bludit-brute-force-mitigation-bypass/
+[link to the article](https://rastating.github.io/bludit-brute-force-mitigation-bypass/)
 ** preperation **
  *generating a password list for the script to brute force* 
 	A password list is generated using cewl. 
