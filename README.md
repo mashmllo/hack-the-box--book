@@ -89,16 +89,14 @@ nikto scan reveals /admin & /robots.txt is present in the webpage.
 + The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
 + The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
 + All CGI directories 'found', use '-C none' to test none
-```
-> + "robots.txt" contains 1 entry which should be manually viewed.
-```+ Web Server returns a valid response with junk HTTP methods, this may cause false positives.
++ "robots.txt" contains 1 entry which should be manually viewed.
++ Web Server returns a valid response with junk HTTP methods, this may cause false positives.
 + /admin/config.php: PHP Config file may contain database IDs and passwords.
 + /admin/cplogfile.log: DevBB 1.0 final (http://www.mybboard.com) log file is readable remotely. Upgrade to the latest version.
 + /admin/system_footer.php: myphpnuke version 1.8.8_final_7 reveals detailed system information.
 + OSVDB-3233: /admin/admin_phpinfo.php4: Mon Album from http://www.3dsrc.com version 0.6.2d allows remote admin access. This should be protected.
-```
-> + OSVDB-5034: /admin/login.php?action=insert&username=test&password=test: phpAuction may allow user admin accounts to be inserted without proper authentication. Attempt to log in with user 'test' password 'test' to verify.
-```+ OSVDB-376: /admin/contextAdmin/contextAdmin.html: Tomcat may be configured to let attackers read arbitrary files. Restrict access to /admin.
++ OSVDB-5034: /admin/login.php?action=insert&username=test&password=test: phpAuction may allow user admin accounts to be inserted without proper authentication. Attempt to log in with user 'test' password 'test' to verify.
++ OSVDB-376: /admin/contextAdmin/contextAdmin.html: Tomcat may be configured to let attackers read arbitrary files. Restrict access to /admin.
 + OSVDB-2813: /admin/database/wwForum.mdb: Web Wiz Forums pre 7.5 is vulnerable to Cross-Site Scripting attacks. Default login/pass is Administrator/letmein
 + OSVDB-2922: /admin/wg_user-info.ml: WebGate Web Eye exposes user names and passwords.
 + ERROR: Error limit (20) reached for host, giving up. Last error: opening stream: can't connect (timeout): Transport endpoint is not connected
@@ -122,6 +120,13 @@ nikto scan reveals /admin & /robots.txt is present in the webpage.
 
 ```
 #### dirbuster
+Dirbuster is used to see if there are any other directories is left out. 
+Indeed, todo.txt is being left out by nikto scan
+Therefore, the final 3 directories found are: 
+<br />
+	1. robots.txt
+	2. todo.txt
+	3. /admin
 ````
 DirBuster 1.0-RC1 - Report
 http://www.owasp.org/index.php/Category:OWASP_DirBuster_Project
@@ -140,7 +145,7 @@ Dirs found with a 403 response:
 Dirs found with a 200 response:
 
 /
->/admin/<
+/admin/
 /bl-kernel/
 /bl-themes/
 /bl-kernel/js/
@@ -152,7 +157,7 @@ Dirs found with a 200 response:
 --------------- omitted --------------- 
 /bl-kernel/admin/controllers/settings-general.php
 /bl-themes/blogx/css/style.css
->/robots.txt<
+/robots.txt
 /bl-themes/alternative/css/style.css
 /bl-themes/social-network/css/style.css
 /bl-kernel/admin/themes/booty/css/bludit.bootstrap.css
