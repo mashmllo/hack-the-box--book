@@ -164,7 +164,7 @@ Dirs found with a 200 response:
 
 ````
 */robots.txt*
-[link text](hack-the-box--blunder/blob/master/img/robots.jpg)
+![Image of robot.txt](https://github.com/friend-col/hack-the-box--blunder/blob/master/img/robots.jpg)
 
 */todo.txt*
 todo.txt is a list of things that needs to be completed 
