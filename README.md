@@ -37,7 +37,7 @@ Understanding what applications are running on the system gives an attacker need
 
 Server IP Address | Ports Open
 ------------------|----------------------------------------
-10.10.10.191      | **TCP**: 21,80\
+10.10.10.191      | **TCP**: 80\
 
 
 ##### Nmap Scan Results
@@ -164,7 +164,7 @@ Dirs found with a 200 response:
 
 ````
 */robots.txt*
-<insert img>
+[link text](hack-the-box--blunder/blob/master/img/robots.jpg)
 
 */todo.txt*
 todo.txt is a list of things that needs to be completed 
