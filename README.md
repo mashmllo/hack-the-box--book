@@ -29,6 +29,9 @@ OS: Linux
 Difficulty: Easy
 
 Release: May 30 2020
+
+### Things to note
+Full length of the code and the scan results can be found at the [appendix page](https://github.com/friend-col/hack-the-box--blunder/tree/master/appendix)
 ## Service Enumeration
 
 The service enumeration portion of a penetration test focuses on gathering information about what services are alive on a system or systems.
@@ -68,9 +71,9 @@ Nmap done: 1 IP address (1 host up) scanned in 1376.98 seconds
 
 ```
 
-### web page
+### Webpage
 
-#### source code
+#### Source Code
 when looking through the source code, there is nothing out of the ordinary.
 
 #### nikto scan
@@ -119,7 +122,7 @@ nikto scan reveals /admin & /robots.txt is present in the webpage.
 - Sent updated info to cirt.net -- Thank you!
 
 ```
-#### dirbuster
+#### dirbuster scan
 Dirbuster is used to see if there are any other directories is left out. 
 Indeed, todo.txt is being left out by nikto scan
 Therefore, the final 3 directories found are: 
@@ -174,6 +177,7 @@ Dirs found with a 200 response:
 --------------------------------
 
 ````
+### Going into the various directories and files shown
 #### /robots.txt
 robots.txt does not disclose any directories.
 <br />
@@ -201,7 +205,7 @@ An article shows a script for Bludit Brute Force Bypass. <br />
 [link to the article](https://rastating.github.io/bludit-brute-force-mitigation-bypass/)
 <br />
 ## Preperation
-### generating a password list for the script to brute force
+### Generating a password list for the script to brute force
  <br />
 	A password list is generated using cewl. 
 	Cewl is a  ruby app which spiders a given url to a specified depth, optionally following external links, and returns a list of words which can then be used for password crackers 
@@ -213,7 +217,7 @@ command: cewl -w wordlist.txt -d 10 -m 1 http://10.10.10.191/
 	- -m 1: Minimum word length, the minimum word length in this case is 1 
 ```
 ### Changing the variables of the code 
-Host, login_url, username and wordlist is set accordingly.
+Host, login_url, username and wordlist is set accordingly. [link to entire code](https://github.com/friend-col/hack-the-box--blunder/blob/master/appendix/bludit_bruteforce.py)
 <br />
 ```
 #snippet of the code
@@ -222,7 +226,7 @@ login_url = host + '/admin/login' # Target URL
 username = 'fergus' # username 
 wordlist = open_ressources('/root/htb-blunder/wordlist.txt') # wordlist of the password
 ```
-### results
+### Results
    username and password is **fergus:RolandDeschain**
 ````
     [*] Trying: to
@@ -257,7 +261,7 @@ wordlist = open_ressources('/root/htb-blunder/wordlist.txt') # wordlist of the p
 |    TARGETURI   |                       /                      |
 <br />	       
 
-### checking the user id
+### Checking the user id
   Based on the id, we are logged in as *www-data* user.
  ```
  www-data@blunder:/var/www/bludit-3.9.2/bl-content/tmp$ id
@@ -275,7 +279,7 @@ Using hashid, it is shown that it is a *SHA1* encryption
 command: hashid faca404fd5c0a31cf1897b823c695c85cffeb98d
 ```
 
-#### results of the hash algorithm
+#### Results of the hash algorithm
 ![Image of hash_results](https://github.com/friend-col/hack-the-box--blunder/blob/master/img/result_of_hash.jpg)
 ### Decryption 
 Using an online decryptor, hugo's password is *Password120*
