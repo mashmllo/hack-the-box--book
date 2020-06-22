@@ -272,34 +272,8 @@ Using hashid, it is shown that it is a *SHA1* encryption
 ```
 command: hashid faca404fd5c0a31cf1897b823c695c85cffeb98d
 ```
-<br />
 #### results
-Hashid is used to find out the encryption algorithm of the hash
-```
-Analyzing 'faca404fd5c0a31cf1897b823c695c85cffeb98d'
-[+] SHA-1 
-[+] Double SHA-1 
-[+] RIPEMD-160 
-[+] Haval-160 
-[+] Tiger-160 
-[+] HAS-160 
-[+] LinkedIn 
-[+] Skein-256(160) 
-[+] Skein-512(160)
-```
-Using an online decryptor, hugo's password is *Password120*
-<br />
-login to hugo account using the credentials and cd home directory to get the flag 
-```
-www-data@blunder:/var/www/bludit-3.10.0a/bl-content/databases$ su hugo
-su hugo
-Password: Password120
-hugo@blunder:/var/www/bludit-3.10.0a/bl-content/databases$ cd ~	
-cd ~
-hugo@blunder:~$ cat user.txt
-cat user.txt
-6eb3f4773e49edbc246dd7238ed6a32a
-```
+
 
 ## Privilege Escalation
 
