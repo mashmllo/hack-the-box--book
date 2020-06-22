@@ -294,7 +294,7 @@ User hugo may run the following commands on blunder:
 ```
 From results, it is shown that hugo is able to execute the command /bin/bash as a sudo user with !root restriction. Therefore, using 
 [sudo bash bypass command:](https://n0w4n.nl/sudo-security-bypass/) sudo -u#-1 /bin/bash.
-[sudo bash bypass command](https://www.google.com)
+
 <br />
 This command turn hugo into a root user. Navigate into the root home directory to get the root flag. 
 ```
