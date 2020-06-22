@@ -273,7 +273,18 @@ Using hashid, it is shown that it is a *SHA1* encryption
 command: hashid faca404fd5c0a31cf1897b823c695c85cffeb98d
 ```
 #### results
-
+```
+Analyzing 'faca404fd5c0a31cf1897b823c695c85cffeb98d'
+[+] SHA-1 
+[+] Double SHA-1 
+[+] RIPEMD-160 
+[+] Haval-160 
+[+] Tiger-160 
+[+] HAS-160 
+[+] LinkedIn 
+[+] Skein-256(160) 
+[+] Skein-512(160)
+```
 
 ## Privilege Escalation
 
