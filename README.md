@@ -212,12 +212,14 @@ command: cewl -w wordlist.txt -d 10 -m 1 http://10.10.10.191/
 	- -d 10: Depth to spider to, the depth in this case is 10
 	- -m 1: Minimum word length, the minimum word length in this case is 1 
 ```
-
+<br />
 ### preperating the code to for brute force
  <br />
-   host was set to the IP address of the target machine 
-   username was set to *fregus*, the username shown in todo.txt
-   path of the password file was also set, *wordlist.txt* 
+   Host was set to the IP address of the target machine 
+   <br />
+   Username was set to *fergus*, the username shown in todo.txt
+   <br />
+   Path of the password file was also set, *wordlist.txt* 
    <br />
    [link to the code](https://github.com/bludit/bludit/pull/1090)
    <br />
