@@ -279,8 +279,8 @@ command: hashid faca404fd5c0a31cf1897b823c695c85cffeb98d
 ![Image of hash_results](https://github.com/friend-col/hack-the-box--blunder/blob/master/img/result_of_hash.jpg)
 ### Decryption 
 Using an online decryptor, hugo's password is *Password120*
-### Getting User Flag
-This command turn hugo into a root user. Navigate into the root home directory to get the root flag. 
+### User Flag
+Login as Hugo and navigate into the home directory to get the flag. 
 <br />
 ![Image of user_flag](https://github.com/friend-col/hack-the-box--blunder/blob/master/img/user_flag.jpg)
 ## Privilege Escalation
@@ -299,11 +299,11 @@ User hugo may run the following commands on blunder:
 From results, it is shown that hugo is able to execute the command /bin/bash as a sudo user with !root restriction. Therefore, using 
 [sudo bash bypass command:](https://n0w4n.nl/sudo-security-bypass/) sudo -u#-1 /bin/bash.
 
-<br />
 #### Getting root flag 
 This command turn hugo into a root user. Navigate into the root home directory to get the root flag. 
 <br />
 ![Image of root_flag](https://github.com/friend-col/hack-the-box--blunder/blob/master/img/root_flag.jpg)
+
 ## Additional Information about the exploit
 ### sudo bash bypass
 #### Description
