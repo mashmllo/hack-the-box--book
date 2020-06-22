@@ -214,6 +214,7 @@ command: cewl -w wordlist.txt -d 10 -m 1 http://10.10.10.191/
 ```
 ### Changing the variables of the code 
 ```
+#snippet of the code
 host = 'http://10.10.10.191' # IP address of the target machine
 login_url = host + '/admin/login' # Target URL
 username = 'fergus' # username 
