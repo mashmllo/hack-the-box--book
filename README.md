@@ -212,7 +212,7 @@ command: cewl -w wordlist.txt -d 10 -m 1 http://10.10.10.191/
 	- -d 10: Depth to spider to, the depth in this case is 10
 	- -m 1: Minimum word length, the minimum word length in this case is 1 
 ```
-<br />
+
 ### preperating the code to for brute force
  <br />
    host was set to the IP address of the target machine 
@@ -228,8 +228,7 @@ command: cewl -w wordlist.txt -d 10 -m 1 http://10.10.10.191/
 	username = 'fergus' # username 
 	wordlist = open_ressources('/root/htb-blunder/wordlist.txt') # wordlist of the password
 ```
-   <br />
-   
+
 ##### results
    username and password is **fergus:RolandDeschain**
 ````
