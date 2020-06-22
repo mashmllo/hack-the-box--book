@@ -273,9 +273,12 @@ wordlist = open_ressources('/root/htb-blunder/wordlist.txt') # wordlist of the p
    "admin": {
 ```
 Using hashid, it is shown that it is a *SHA1* encryption 
-```command: hashid faca404fd5c0a31cf1897b823c695c85cffeb98d```
+```
+command: hashid faca404fd5c0a31cf1897b823c695c85cffeb98d
+```
 <br />
-**results**
+#### results
+Hashid is used to find out the encryption algorithm of the hash
 ```
 Analyzing 'faca404fd5c0a31cf1897b823c695c85cffeb98d'
 [+] SHA-1 
