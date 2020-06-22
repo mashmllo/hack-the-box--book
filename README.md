@@ -264,14 +264,10 @@ wordlist = open_ressources('/root/htb-blunder/wordlist.txt') # wordlist of the p
  id
  uid=33(www-data) gid=33(www-data) groups=33(www-data)
  ```
-  <br />
+ <br />
  Going back to the databases directory(*/var/www/bludit-3.10.0.a/bl-content/databases/users.php*) to get all the usernames and passwords
-   <br />
-```
- <?php defined('BLUDIT') or die('Bludit CMS.'); ?>
-{
-   "admin": {
-```
+ <br />
+
 Using hashid, it is shown that it is a *SHA1* encryption 
 ```
 command: hashid faca404fd5c0a31cf1897b823c695c85cffeb98d
