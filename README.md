@@ -201,7 +201,7 @@ An article shows a script for Bludit Brute Force Bypass. <br />
 [link to the article](https://rastating.github.io/bludit-brute-force-mitigation-bypass/)
 <br />
 ## Preperation
-#### generating a password list for the script to brute force
+### generating a password list for the script to brute force
  <br />
 	A password list is generated using cewl. 
 	Cewl is a  ruby app which spiders a given url to a specified depth, optionally following external links, and returns a list of words which can then be used for password crackers 
@@ -212,9 +212,9 @@ command: cewl -w wordlist.txt -d 10 -m 1 http://10.10.10.191/
 	- -d 10: Depth to spider to, the depth in this case is 10
 	- -m 1: Minimum word length, the minimum word length in this case is 1 
 ```
+### Changing the variables of the code 
 
-
-##### results
+### results
    username and password is **fergus:RolandDeschain**
 ````
     [*] Trying: to
