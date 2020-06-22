@@ -318,7 +318,7 @@ CVE-2019-14287
  #### Severity
   CVSS 3.0 score: 8.8 High
 
-### bludit bypass
+### Bludit Bypass
 #### Description
    bl-kernel/security.class.php in Bludit 3.9.2 allows attackers to bypass a brute-force protection mechanism by using many different forged X-Forwarded-For or Client-IP HTTP headers
   <br />
