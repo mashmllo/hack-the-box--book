@@ -213,7 +213,8 @@ command: cewl -w wordlist.txt -d 10 -m 1 http://10.10.10.191/
 	- -m 1: Minimum word length, the minimum word length in this case is 1 
 ```
 <br />
-### preperating the code to for brute force
+### Preparing the code for Brute Force 
+
  <br />
    Host was set to the IP address of the target machine 
    <br />
