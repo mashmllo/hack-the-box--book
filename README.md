@@ -271,7 +271,7 @@ An article shows a script for Bludit Brute Force Bypass. <br />
  uid=33(www-data) gid=33(www-data) groups=33(www-data)
  ```
   <br />
- Going back to the databases directory(/bl-content/databases/ users.php) to get all the usernames and passwords
+ Going back to the databases directory(*/var/www/bludit-3.10.0.a/bl-content/databases/users.php*) to get all the usernames and passwords
    <br />
 ````
  <?php defined('BLUDIT') or die('Bludit CMS.'); ?>
@@ -293,31 +293,8 @@ An article shows a script for Bludit Brute Force Bypass. <br />
         "codepen": "",
         "linkedin": "",
         "github": "",
-        "gitlab": ""
-    },
-    "fergus": {
-        "firstName": "",
-        "lastName": "",
-        "nickname": "",
-        "description": "",
-        "role": "author",
-        "password": "be5e169cdf51bd4c878ae89a0a89de9cc0c9d8c7",
-        "salt": "jqxpjfnv",
-        "email": "",
-        "registered": "2019-11-27 13:26:44",
-        "tokenRemember": "aec02cfc0930f6f91cb27030cf25e2b2",
-        "tokenAuth": "0e8011811356c0c5bd2211cba8c50471",
-        "tokenAuthTTL": "2009-03-15 14:00",
-        "twitter": "",
-        "facebook": "",
-        "codepen": "",
-        "instagram": "",
-        "github": "",
-        "gitlab": "",
-        "linkedin": "",
-        "mastodon": ""
+        "gitlab": ""}
     }
-}
 ````
 Using hashid, it is shown that it is a *SHA1* encryption 
 ```command: hashid faca404fd5c0a31cf1897b823c695c85cffeb98d```
