@@ -213,6 +213,8 @@ command: cewl -w wordlist.txt -d 10 -m 1 http://10.10.10.191/
 	- -m 1: Minimum word length, the minimum word length in this case is 1 
 ```
 ### Changing the variables of the code 
+Host, login_url, username and wordlist is set accordingly.
+<br />
 ```
 #snippet of the code
 host = 'http://10.10.10.191' # IP address of the target machine
