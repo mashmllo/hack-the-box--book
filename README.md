@@ -213,7 +213,12 @@ command: cewl -w wordlist.txt -d 10 -m 1 http://10.10.10.191/
 	- -m 1: Minimum word length, the minimum word length in this case is 1 
 ```
 ### Changing the variables of the code 
-
+```
+host = 'http://10.10.10.191' # IP address of the target machine
+login_url = host + '/admin/login' # Target URL
+username = 'fergus' # username 
+wordlist = open_ressources('/root/htb-blunder/wordlist.txt') # wordlist of the password
+```
 ### results
    username and password is **fergus:RolandDeschain**
 ````
