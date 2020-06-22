@@ -225,11 +225,11 @@ command: cewl -w wordlist.txt -d 10 -m 1 http://10.10.10.191/
    [link to the code](https://github.com/bludit/bludit/pull/1090)
    <br />
 ``` 
-	#snippet of the code
-        host = 'http://10.10.10.191' # IP address of the target machine
-	login_url = host + '/admin/login' # Target URL
-	username = 'fergus' # username 
-	wordlist = open_ressources('/root/htb-blunder/wordlist.txt') # wordlist of the password
+#snippet of the code
+host = 'http://10.10.10.191' # IP address of the target machine
+login_url = host + '/admin/login' # Target URL
+username = 'fergus' # username 
+wordlist = open_ressources('/root/htb-blunder/wordlist.txt') # wordlist of the password
 ```
 
 ##### results
