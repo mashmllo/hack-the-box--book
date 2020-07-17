@@ -1,0 +1,30 @@
+<?xml version="1.0>
+<DirBusterResults>
+<Result type="File" path="/index.php" responseCode="200" />
+<Result type="File" path="/download.php" responseCode="302" />
+<Result type="Dir" path="/" responseCode="200" />
+<Result type="Dir" path="/images/" responseCode="403" />
+<Result type="File" path="/home.php" responseCode="302" />
+<Result type="Dir" path="/icons/" responseCode="403" />
+<Result type="Dir" path="/docs/" responseCode="403" />
+<Result type="File" path="/contact.php" responseCode="302" />
+<Result type="File" path="/search.php" responseCode="302" />
+<Result type="Dir" path="/admin/" responseCode="200" />
+<Result type="File" path="/profile.php" responseCode="302" />
+<Result type="File" path="/books.php" responseCode="302" />
+<Result type="File" path="/feedback.php" responseCode="302" />
+<Result type="File" path="/admin/index.php" responseCode="200" />
+<Result type="File" path="/admin/home.php" responseCode="302" />
+<Result type="File" path="/db.php" responseCode="200" />
+<Result type="File" path="/admin/feedback.php" responseCode="302" />
+<Result type="File" path="/admin/users.php" responseCode="302" />
+<Result type="File" path="/logout.php" responseCode="302" />
+<Result type="Dir" path="/icons/small/" responseCode="403" />
+<Result type="File" path="/admin/messages.php" responseCode="302" />
+<Result type="File" path="/collections.php" responseCode="302" />
+<Result type="File" path="/settings.php" responseCode="302" />
+<Result type="Dir" path="/admin/export/" responseCode="403" />
+<Result type="Dir" path="/admin/vendor/" responseCode="403" />
+<Result type="File" path="/admin/collections.php" responseCode="302" />
+<Result type="Dir" path="/admin/vendor/composer/" responseCode="403" />
+</DirBusterResults>

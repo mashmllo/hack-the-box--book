@@ -1,0 +1,54 @@
+DirBuster 1.0-RC1 - Report
+http://www.owasp.org/index.php/Category:OWASP_DirBuster_Project
+Report produced on Fri Jul 17 12:38:24 SGT 2020
+--------------------------------
+
+http://10.10.10.176:80
+--------------------------------
+Directories found during testing:
+
+Dirs found with a 200 response:
+
+/
+/admin/
+
+Dirs found with a 403 response:
+
+/images/
+/icons/
+/docs/
+/icons/small/
+/admin/export/
+/admin/vendor/
+/admin/vendor/composer/
+
+
+--------------------------------
+Files found during testing:
+
+Files found with a 200 responce:
+
+/index.php
+/admin/index.php
+/db.php
+
+Files found with a 302 responce:
+
+/download.php
+/home.php
+/contact.php
+/search.php
+/profile.php
+/books.php
+/feedback.php
+/admin/home.php
+/admin/feedback.php
+/admin/users.php
+/logout.php
+/admin/messages.php
+/collections.php
+/settings.php
+/admin/collections.php
+
+
+--------------------------------
