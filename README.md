@@ -192,7 +192,7 @@ Use the ssh key to login as reader to retrieve the flag.
 command to login using rsa key: ssh -i rsa_key.txt reader@10.10.10.176
 command to retrieve user flag: cat /home/reader/user.txt
 ```
-Ouput: 
+Ouput: <br>
 ![flag](https://github.com/mashmllo/hack-the-box--book/blob/master/img/user%20flag.jpg)
 
 ## Privilege Escalation
