@@ -14,7 +14,7 @@ book: true
 classoption: oneside
 code-block-font-size: \scriptsize
 ---
-# Hack The Box Cache Walktrough
+# Hack The Box Book Walktrough
 
 ### Information about the box 
 
