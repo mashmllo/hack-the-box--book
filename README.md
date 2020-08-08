@@ -222,10 +222,10 @@ command to run logrotten: cp ~/backups/access.log.1 ~/backups/access.log; ./logr
 command to start netcat: nc -nvlp 4444
 ```
 Explanation of the flags used:
--n : Do not do any DNS or service lookups on any specified addresses, hostnames or ports.
--v : Have nc give more verbose output.
--l : Used to specify that nc should listen for an incoming connection rather than initiate a connection to a remote host
--p : Specifies the source port nc should use, subject to privilege restrictions and availability
+* -n : Do not do any DNS or service lookups on any specified addresses, hostnames or ports.
+* -v : Have nc give more verbose output.
+* -l : Used to specify that nc should listen for an incoming connection rather than initiate a connection to a remote host
+* -p : Specifies the source port nc should use, subject to privilege restrictions and availability
 
 ## Root Flag 
 
